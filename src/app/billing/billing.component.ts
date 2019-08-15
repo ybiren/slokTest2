@@ -28,8 +28,7 @@ export class BillingComponent implements OnInit {
     if (this.billingSvc.IsBillingFormValid()) {
       this.billingSvc.PostBillingData();
     } else {
-      const modalRef = this.modalService.open(AlertModalComponent, {centered: true, backdrop: 'static'});
-      //alert("Wrong credit card number");
+      this.modalService.open(AlertModalComponent, {centered: true, backdrop: 'static'});
     }
   }
   
