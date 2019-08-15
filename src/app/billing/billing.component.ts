@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SlokotoService } from '../slokoto.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AlertModalComponent } from '../alert-modal/alert-modal.component';
 
 @Component({
   selector: 'app-billing',
@@ -12,7 +14,7 @@ export class BillingComponent implements OnInit {
   public price = 0;
   public showSettings = true;
   
-  constructor(private billingSvc: SlokotoService) { }
+  constructor(private billingSvc: SlokotoService, private modalService: NgbModal) { }
 
   ngOnInit() {
   }
@@ -26,7 +28,8 @@ export class BillingComponent implements OnInit {
     if (this.billingSvc.IsBillingFormValid()) {
       this.billingSvc.PostBillingData();
     } else {
-      alert("Wrong credit card number");
+      const modalRef = this.modalService.open(AlertModalComponent, {centered: true, backdrop: 'static'});
+      //alert("Wrong credit card number");
     }
   }
   
