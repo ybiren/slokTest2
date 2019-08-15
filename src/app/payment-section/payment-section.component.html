@@ -1,0 +1,117 @@
+<div class="container">
+<div class="font-hdr-28">Payment</div> 
+<div class="form-row">
+<div class="col-12">
+ <div class="form-group">
+  <label class="font-12-20-60" for="selPayMethod">Choose Payment Method</label>
+  <select class="form-control" id="selPayMethod">
+    <option *ngFor="let method of paymentMethods">
+      {{method}}
+    </option>
+  </select>
+</div>
+</div>
+</div>
+<div class="bottom-border"></div>
+<div class="font-hdr-28">Card Info</div> 
+<div class="form-row">
+  <div class="col-4 mr-2">
+  <div class="form-group">
+    <label class="font-12-20-60" for="selPayMethod">Card Type</label>
+      <select class="form-control" id="selPayMethod" [(ngModel)]="this.billingSvc.billing.cardType">
+        <option *ngFor="let ccTYpe of creditCardTypes">
+        {{ccTYpe}}
+        </option>
+      </select>
+    </div>
+  </div> 
+  <div class="col-4">
+    <div class="form-group">
+      <label class="font-12-20-60" for="txtCardNumber">Card Number</label>
+      <input type="number" class="form-control" id="txtCardNumber" [(ngModel)]="this.billingSvc.billing.cardNumber">
+    </div>
+  </div>
+</div>   
+<div class="form-row">
+        <div class="col-4 mr-2">
+        <div class="form-group">
+          <label class="font-12-20-60" for="selExpDate">Expiration Date</label>
+            <div class="form-inline">
+            <select class="form-control"  id="selMonthExpire" [(ngModel)]="this.billingSvc.billing.expirationMonth"  >
+              <option *ngFor="let month of monthList">
+              {{month}}
+              </option>
+            </select>
+            <select class="form-control" id="selYearExpire" [(ngModel)]="this.billingSvc.billing.expirationYear">
+              <option *ngFor="let year of yearList">
+              {{year}}
+              </option>
+            </select>
+            </div>
+        </div>
+        </div> 
+        <div class="col-4">
+          <div class="form-group">
+            <label class="font-12-20-60" for="txtCardNumber">Security Code</label>
+            <input type="number" class="form-control" id="txtCardNumber" [(ngModel)]="this.billingSvc.billing.securityCode">
+          </div>
+        </div>
+      </div>   
+      </div>
+      <div class="font-hdr-28">Billing Info</div> 
+     
+      <div class="form-row">
+        <div class="col-4">
+            <div class="form-group">
+              <label class="font-12-20-60" for="selExpDate">First Name</label>
+              <input size=10 type="text" class="form-control" id="txtFirstName" [(ngModel)]="this.billingSvc.billing.firstName">  
+            </div>
+        </div> 
+        <div class="col-4">
+                <div class="form-group">
+                  <label class="font-12-20-60" for="selExpDate">Last Name</label>
+                  <input size=15 type="text" class="form-control" id="txtLastName" [(ngModel)]="this.billingSvc.billing.lastName">  
+                </div>
+            </div> 
+            <div class="col-4">
+                    <div class="form-group">
+                      <label class="font-12-20-60" for="selExpDate">Company</label>
+                      <input size=15 type="text" class="form-control" id="txtCompany" [(ngModel)]="this.billingSvc.billing.company">  
+                    </div>
+                </div>
+     </div>
+     <div class="form-row">
+            <div class="col-4">
+                <div class="form-group">
+                  <label class="font-12-20-60" for="txtAddress">Address</label>
+                  <input size=15 type="text" class="form-control" id="txtAddress" [(ngModel)]="this.billingSvc.billing.address">  
+                </div>
+            </div> 
+            <div class="col-4">
+                    <div class="form-group">
+                      <label class="font-12-20-60" for="txtCity">City</label>
+                      <input size=15 type="text" class="form-control" id="txtCity" [(ngModel)]="this.billingSvc.billing.city">  
+                    </div>
+                </div> 
+                <div class="col-4">
+                        <div class="form-group">
+                          <label class="font-12-20-60" for="txtPostalCode">Postal Code</label>
+                          <input size=15 type="text" class="form-control" id="txtPostalCode" [(ngModel)]="this.billingSvc.billing.postalCode">  
+                        </div>
+                    </div>
+         </div>
+         <div class="form-row">
+            <div class="col-4">
+            <div class="form-group">
+              <label class="font-12-20-60" for="selPayMethod">Country</label>
+              <input size=10 type="text" class="form-control" id="txtCountry" [(ngModel)]="this.billingSvc.billing.country">
+            </div>
+            </div> 
+            <div class="col-4">
+              <div class="form-group">
+                <label class="font-12-20-60" for="txtCardNumber">Phone</label>
+                <input size=10 type="text" class="form-control" id="txtPhone" [(ngModel)]="this.billingSvc.billing.phone">
+              </div>
+            </div>
+          </div>   
+                

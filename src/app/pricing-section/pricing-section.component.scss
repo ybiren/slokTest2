@@ -1,0 +1,39 @@
+.period-container {
+    display: inline-block;
+    .period-value {
+    font-family: Helvetica;
+    font-size: 28px;
+    color: #8798a0;
+    padding-right: 33px;
+    cursor: pointer;
+    &.selected {
+        color: #7b7fff;
+    }
+  }    
+  .font-12-50 {
+      font-family: Helvetica;
+      color: #8798a0;  
+      opacity: 0.5;
+      font-size: 12px;
+      padding-right: 60px;
+  }
+}
+.plan {
+  .plan-image-container {
+    display: inline-block;
+    .plan-img {
+      margin-right: 30px;
+      margin-top: 30px;
+      cursor: pointer;
+      width: 270px;
+      transition: border 1s;
+      &.selected  {
+        border: 10px solid #7b7fff;  
+      }
+    }
+  }
+}
+.bottom-border {
+  margin-top: 60px;
+}
+  

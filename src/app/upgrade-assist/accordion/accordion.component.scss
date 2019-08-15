@@ -1,0 +1,39 @@
+.accordion-box {
+    width: 344px;
+    height: 60px; 
+    border: 1px solid #dee4e7; 
+    position: relative; 
+    cursor: pointer;
+    .font-20-16 {
+      font-family: Helvetica;  
+      color: #475962;
+      font-size: 16px;
+      line-height: 20px;
+      position: absolute;
+      left: 30px;
+      top: 20px;
+    }
+    .fa {
+      position: absolute;
+      right: 30px;
+      font-size: 16px;
+      top: 20px;
+    }
+  }
+  .data {
+    font-family: Helvetica;  
+    font-size: 20px;  
+    border: 1px dashed black;
+    width: 344px;
+    height: 60px;
+    position: relative;
+    .font-20-16 {
+      font-family: Helvetica;  
+      color: #7b7fff;
+      font-size: 16px;
+      line-height: 20px;
+      position: absolute;
+      left: 30px;
+      top: 20px;
+    }
+  }

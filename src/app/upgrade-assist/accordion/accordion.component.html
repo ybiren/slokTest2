@@ -1,0 +1,15 @@
+<div class="accordion-box" (click)="doToggle()">
+  <div class="font-20-16">{{txt}}</div>
+  <i class="fa" [ngClass]="{'fa-chevron-up' : isExpanded , 'fa-chevron-down' : !isExpanded}" ></i>
+</div>    
+<div *ngIf="isExpanded">
+  <div class="data">
+    <div class="font-20-16">loprem ipsum</div>
+  </div>
+  <div class="data">
+      <div class="font-20-16">loprem ipsum</div>
+  </div>
+  <div class="data">
+      <div class="font-20-16">loprem ipsum</div>
+    </div>
+</div>

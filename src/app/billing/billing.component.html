@@ -1,0 +1,42 @@
+<div class="primary-grid" [ngClass]="{'all-grid' : !showSettings}">
+  <div class="primary-settings-col" *ngIf="showSettings">
+   <img src="assets/settings2.png" usemap="#toggleSettingsmap">
+   <map name="toggleSettingsmap">
+      <area shape="rect" coords="380,10,405,40" (click)="toggleSettings()" alt="Toggle settings">
+   </map>
+   <img src="assets/settings3.png"> 
+   <img src="assets/settings4.png">
+   <img src="assets/settings4.png"> 
+   <img src="assets/settings5.png" width=435 height=170> 
+  </div>  
+  <div class="primary-billing-col" [ngClass]="{'all-grid' : !showSettings}">
+    <div class="right-side">
+      <div class="billing-main-container">
+      <div class="upgrade-menu-btn"><img src="assets/upgrade_top.png"></div>
+      <div class="container-fluid" [ngClass]="{'all-grid' : !showSettings}">
+        <div class="row flex-nowrap">
+          <div class="col-2">
+                <img class="left-img" src="assets/1.svg">
+          </div>   
+          <div class="col-6">
+            <app-billing-section></app-billing-section>
+            <app-pricing-section (planChanged)="setTotal($event)"></app-pricing-section>
+          </div>    
+          <div class="col-4">
+              <app-upgrade-assist></app-upgrade-assist>
+          </div>
+        </div>
+        <div class="row">
+          <div class="offset-2 col-6">
+            <app-payment-section></app-payment-section>
+          </div>
+          <div class="col-4 plan">
+            <app-plan-section [totalPrice]="price"></app-plan-section>
+            <img (click)="checkAndPostData()" src="assets/submit.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>  

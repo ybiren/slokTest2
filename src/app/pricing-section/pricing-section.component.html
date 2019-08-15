@@ -1,0 +1,33 @@
+<div class="font-hdr-28">Pricing</div>
+<div>
+  <div class="period-container">
+      <div class="period-value" [ngClass]="{'selected': period === 'year'}"  (click)="setPeriod('year')">Yearly</div>
+      <div class="font-12-50">SAVE 32%</div>
+  </div>
+  <div class="period-container">
+      <div class="period-value" [ngClass]="{'selected': period === 'twoYears'}" (click)="setPeriod('twoYears')">Two Yearly</div>
+      <div class="font-12-50">SAVE 32%</div>
+  </div>
+  <div class="period-container">
+    <div class="period-value" [ngClass]="{'selected': period === 'month'}" (click)="setPeriod('month')">Monthly</div>
+    <div class="font-12-50">&nbsp;</div>
+  </div>
+</div>     
+<div class="plan">
+  <div class="plan-image-container">
+    <img class="plan-img" [ngClass]="{'selected': planDescription === 'basic'}" src="assets/basic.png"  (click)="setPlanDescription('basic', 9)">    
+  </div>
+  <div class="plan-image-container">
+    <img class="plan-img" [ngClass]="{'selected': planDescription === 'standart'}" src="assets/standart.png"  (click)="setPlanDescription('standart', 29)"> 
+  </div> 
+</div>
+  <div class="plan">
+    <div class="plan-image-container">
+      <img class="plan-img" [ngClass]="{'selected': planDescription === 'pro'}" src="assets/pro.png"  (click)="setPlanDescription('pro', 69)" >    
+    </div>
+    <div class="plan-image-container">
+      <img class="plan-img" [ngClass]="{'selected': planDescription === 'enterprise'}" src="assets/enterprise.png"   (click)="setPlanDescription('enterprise', 99)"> 
+    </div> 
+  </div>
+  
+<div class="bottom-border"></div>

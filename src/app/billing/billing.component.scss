@@ -1,0 +1,74 @@
+.primary-grid {
+  display: grid;
+  grid-template-columns: 435px auto;
+  &.all-grid { 
+    grid-template-columns: auto;
+  }  
+  grid-template-rows: auto;
+  .primary-settings-col {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .primary-billing-col {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    &.all-grid {
+      grid-column-start: 1 !important;
+      grid-column-end: 1 !important;
+    }
+  }
+  img[src="assets/settings2.png"] {
+    width: 435px; 
+  }
+}
+.right-side {
+  background: #eef2f5;
+  padding: 54px 20px;
+  position: relative;
+  .upgrade-menu-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  .billing-main-container {
+    background: #fff;
+    border-radius: 3px;
+  }
+  .left-img {
+    padding-top: 60px;
+    width: 140px;
+    height: 140px;
+  }
+  .col-2 {
+    display: table-cell;
+    height: auto;
+    float: none;
+    > img {
+      position:absolute;
+      left: 50%;
+      transform: translate(-50%,0);
+    }
+  }
+  .col-4.plan {
+    display: table-cell;
+      height: auto;
+      float: none;
+      > img {
+        position:absolute;
+        width: 345px;
+        left: 20px;
+        bottom: 20px;
+        cursor: pointer;
+      }
+  }
+  
+  .container-fluid { 
+    width: 100vw; 
+    &.all-grid {
+      width: auto !important;
+    }
+  } 
+}
+
+
+

@@ -1,0 +1,20 @@
+.form-control {
+    font-family: Helvetica;
+    font-size: 20px;
+    color:#666b77;
+    width: auto;
+}
+.form-group {
+  padding: none !important;
+  border: none !important;
+  margin-bottom: 30px;
+  > label {
+   margin-bottom: 0;
+ }
+ #selMonthExpire {
+   margin-right: 30px;
+ }
+}
+.bottom-border {
+  margin-top: 18px;
+}
