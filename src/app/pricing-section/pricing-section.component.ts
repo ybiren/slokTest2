@@ -20,9 +20,12 @@ export class PricingSectionComponent implements OnInit {
     this.period = period;
   }
  
-  setPlanDescription(planDescription: string, price: number) {
+  setPlanDescription(planDescription: string, priceObj: any) {
     this.planDescription = planDescription;
-    this.planChanged.emit(price);
+    this.planChanged.emit(priceObj[this.period]);
   }
 
+  planImageSrc(plan: string): string {
+    return `assets/${plan}_${this.period}.png`;
+  }
 }

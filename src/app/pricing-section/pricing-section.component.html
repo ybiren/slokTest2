@@ -15,18 +15,35 @@
 </div>     
 <div class="plan">
   <div class="plan-image-container">
-    <img class="plan-img" [ngClass]="{'selected': planDescription === 'basic'}" src="assets/basic.png"  (click)="setPlanDescription('basic', 9)">    
+    <img class="plan-img" 
+      [ngClass]="{'selected': planDescription === 'basic'}" 
+      [src]="planImageSrc('basic')"  
+      (click)="setPlanDescription('basic', {'month':11, 'year':9 , 'twoYears':6 })"
+    >    
   </div>
   <div class="plan-image-container">
-    <img class="plan-img" [ngClass]="{'selected': planDescription === 'standart'}" src="assets/standart.png"  (click)="setPlanDescription('standart', 29)"> 
+   <img class="plan-img" 
+    [ngClass]="{'selected': planDescription === 'standart'}" 
+    [src]="planImageSrc('standart')"  
+    (click)="setPlanDescription('standart', {'month':35, 'year':29 , 'twoYears':19 })"
+   > 
   </div> 
 </div>
   <div class="plan">
     <div class="plan-image-container">
-      <img class="plan-img" [ngClass]="{'selected': planDescription === 'pro'}" src="assets/pro.png"  (click)="setPlanDescription('pro', 69)" >    
+      <img class="plan-img" 
+       [ngClass]="{'selected': planDescription === 'pro'}" 
+       [src]="planImageSrc('pro')"  
+       (click)="setPlanDescription('pro', {'month':83, 'year':69 , 'twoYears':45 })"
+      >    
     </div>
     <div class="plan-image-container">
-      <img class="plan-img" [ngClass]="{'selected': planDescription === 'enterprise'}" src="assets/enterprise.png"   (click)="setPlanDescription('enterprise', 99)"> 
+      <img 
+       class="plan-img" 
+       [ngClass]="{'selected': planDescription === 'enterprise'}" 
+       [src]="planImageSrc('enterprise')"   
+       (click)="setPlanDescription('enterprise', {'month':119, 'year':99 , 'twoYears':65 })"
+      > 
     </div> 
   </div>
   
