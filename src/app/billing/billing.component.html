@@ -12,8 +12,9 @@
   <div class="primary-billing-col" [ngClass]="{'all-grid' : !showSettings}">
     <div class="right-side">
       <div class="billing-main-container">
-      <div class="upgrade-menu-btn"><img src="assets/upgrade_top.png"></div>
-      <div class="container-fluid" [ngClass]="{'all-grid' : !showSettings}">
+        <div class="upgrade-menu-btn"><img src="assets/upgrade_top.png"></div>
+        <div class="settings-menu-btn" (click)="showSettings = true">Settings</div>
+        <div class="container-fluid" [ngClass]="{'all-grid' : !showSettings}">
         <div class="row flex-nowrap">
           <div class="col-2">
                 <img class="left-img" src="assets/1.svg">

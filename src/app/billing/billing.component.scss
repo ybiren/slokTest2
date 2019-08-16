@@ -18,9 +18,6 @@
       grid-column-end: 1 !important;
     }
   }
-  img[src="assets/settings2.png"] {
-    width: 435px; 
-  }
 }
 .right-side {
   background: #eef2f5;
@@ -30,6 +27,23 @@
     position: absolute;
     top: 10px;
     right: 20px;
+    img[src="assets/settings2.png"] {
+      width: 435px; 
+    }
+  }
+  .settings-menu-btn {
+    position: absolute;
+    top: 10px;
+    right: 130px;
+    color: #fff;
+    font-family: Helvetica;
+    background-image: linear-gradient(to right, #8c38fd, #49aaff );
+    line-height: 20px;
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-top: 10px;
+    cursor: pointer;
   }
   .billing-main-container {
     background: #fff;
