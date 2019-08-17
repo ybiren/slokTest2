@@ -2,7 +2,7 @@
   <div class="primary-settings-col" *ngIf="showSettings">
    <img src="assets/settings2.png" usemap="#toggleSettingsmap">
    <map name="toggleSettingsmap">
-      <area shape="rect" coords="380,10,405,40" (click)="toggleSettings()" alt="Toggle settings">
+    <area shape="rect" coords="380,10,405,40" (click)="toggleSettings()" alt="Toggle settings">
    </map>
    <img src="assets/settings3.png"> 
    <img src="assets/settings4.png">
@@ -12,8 +12,8 @@
   <div class="primary-billing-col" [ngClass]="{'all-grid' : !showSettings}">
     <div class="right-side">
       <div class="billing-main-container">
-        <div class="upgrade-menu-btn"><img src="assets/upgrade_top.png"></div>
-        <div class="settings-menu-btn" (click)="showSettings = true">Settings</div>
+        <div class="upgrade-menu-btn">&nbsp;</div>
+        <div *ngIf="!showSettings" class="settings-menu-btn" (click)="showSettings = true">Settings</div>
         <div class="container-fluid" [ngClass]="{'all-grid' : !showSettings}">
         <div class="row flex-nowrap">
           <div class="col-2">
